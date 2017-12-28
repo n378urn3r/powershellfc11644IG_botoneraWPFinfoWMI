@@ -1,39 +1,9 @@
 ﻿[void][System.Reflection.Assembly]::LoadWithPartialName('presentationframework')
-# Script.ps1
-#
-<# Ejercicio 
-Acceder a 
-https://docs.microsoft.com/es-es/powershell/scripting/getting-started/basic-
-cookbooks?view=powershell-5.1
-Crear una aplicación que pueda hacer lo siguiente:
-
-
-Cambiar el estado del equipo
-   Cerrar la sesión actual
-    Apagar o reiniciar un equipo
-Recopilar información acerca de los equipos
-OEnumerar información del BIOS
-Enumerar información del procesador
-Enumerar el modelo y el fabricante del equipo
-Enumerar las revisiones instaladas
-Enumerar la información de versión del sistema operativo
-Enumerar el propietario y los usuarios locales
-Obtener el espacio disponible en disco
-Obtener información de la sesión de inicio
-Obtener la hora local de un equipo
-Obtener objetos de WMI (
-Get-WmiObject
-)
-Utilizando la tecnología WMI obtenga la información de memoria del equipo
-
-
-#>
-
 [xml]$xaml = @'
-
 <Window x:Name="wndMain"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WpfApp3"
        
         Title="Info y ut. de Sistema" Height="363.191" Width="525">
@@ -90,9 +60,44 @@ $btnDiskspaceinfo.Add_Click({  })
 $btnLocalhour.Add_Click({  }) 
 $btnSessioninfo.Add_Click({  })
 $btnWmiobjectinfo.Add_Click({  }) #>
+
 $btnClose.Add_Click({ 
-	$Form.close()
+	$Form.Close()
 }) 
 
 #cargamos form.
-$Form.showdialog()
+$Form.ShowDialog()
+
+
+
+
+
+# Enunciado
+#
+<# Ejercicio 
+Acceder a 
+https://docs.microsoft.com/es-es/powershell/scripting/getting-started/basic-
+cookbooks?view=powershell-5.1
+Crear una aplicación que pueda hacer lo siguiente:
+
+
+Cambiar el estado del equipo
+   Cerrar la sesión actual
+    Apagar o reiniciar un equipo
+Recopilar información acerca de los equipos
+OEnumerar información del BIOS
+Enumerar información del procesador
+Enumerar el modelo y el fabricante del equipo
+Enumerar las revisiones instaladas
+Enumerar la información de versión del sistema operativo
+Enumerar el propietario y los usuarios locales
+Obtener el espacio disponible en disco
+Obtener información de la sesión de inicio
+Obtener la hora local de un equipo
+Obtener objetos de WMI (
+Get-WmiObject
+)
+Utilizando la tecnología WMI obtenga la información de memoria del equipo
+
+
+#>
